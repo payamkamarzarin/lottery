@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function home()
     {
-            $users = User::query()->inRandomOrder()->limit(6)->get();
-            return response($users);
+        $users = User::query()->get();
+        return response($users);
     }
 }
